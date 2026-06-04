@@ -52,7 +52,7 @@ export function Sidebar({ dog, onUrgent }) {
     }}>
       {/* Logo */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '0 8px 24px' }}>
-        <img src="/the-welcome-wag/assets/mark.svg" style={{ width: 34, height: 34 }} alt="" />
+        <img src={`${import.meta.env.BASE_URL}assets/mark.svg`} style={{ width: 34, height: 34 }} alt="" />
         <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 16, color: 'var(--ink-900)' }}>
           Welcome Wag
         </span>
