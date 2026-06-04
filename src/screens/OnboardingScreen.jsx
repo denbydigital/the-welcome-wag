@@ -74,8 +74,21 @@ export function OnboardingScreen() {
     )
   }
 
+  const footer = (
+    <div style={{ padding: '16px 20px 24px', background: 'linear-gradient(to top, var(--cream-50) 70%, transparent)', flexShrink: 0 }}>
+      <WWButton variant="primary" size="lg" full onClick={next} disabled={saving} iconRight="arrow-right">
+        {saving ? 'Saving…' : step === steps.length - 1 ? 'Take me to my plan' : 'Continue'}
+      </WWButton>
+      {step < steps.length - 1 && (
+        <button onClick={() => navigate('/app/today')} style={{ width: '100%', border: 0, background: 'transparent', color: 'var(--ink-500)', fontSize: 13.5, fontWeight: 600, cursor: 'pointer', marginTop: 10 }}>
+          Skip for now
+        </button>
+      )}
+    </div>
+  )
+
   return (
-    <WWScreen>
+    <WWScreen footer={footer}>
       <div style={{ padding: '8px 20px 0' }}>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 22 }}>
@@ -183,17 +196,6 @@ export function OnboardingScreen() {
         )}
       </div>
 
-      {/* Footer CTA */}
-      <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: '16px 20px 24px', background: 'linear-gradient(to top, var(--cream-50) 70%, transparent)' }}>
-        <WWButton variant="primary" size="lg" full onClick={next} disabled={saving} iconRight="arrow-right">
-          {saving ? 'Saving…' : step === steps.length - 1 ? 'Take me to my plan' : 'Continue'}
-        </WWButton>
-        {step < steps.length - 1 && (
-          <button onClick={() => navigate('/app/today')} style={{ width: '100%', border: 0, background: 'transparent', color: 'var(--ink-500)', fontSize: 13.5, fontWeight: 600, cursor: 'pointer', marginTop: 10 }}>
-            Skip for now
-          </button>
-        )}
-      </div>
     </WWScreen>
   )
 }
