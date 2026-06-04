@@ -8,7 +8,7 @@ import {
   WandSparkles, RotateCcw, Info, Flag, MessageCircleQuestion, Bookmark, Tag,
   UtensilsCrossed, Bed, Signal, Wifi, BatteryFull, Lock, Mail, UserRound,
   Languages, LogOut, SlidersHorizontal, Smartphone, Monitor, Sunrise, Globe,
-  Sparkles, Users, BookMarked, ClipboardList,
+  Sparkles, Users, BookMarked, ClipboardList, X,
 } from 'lucide-react'
 
 /* ─── Icon lookup map ───────────────────────────────────────── */
@@ -80,6 +80,7 @@ const ICON_MAP = {
   'users': Users,
   'book-marked': BookMarked,
   'clipboard-list': ClipboardList,
+  'x': X,
 }
 
 /* ─── WWIcon ────────────────────────────────────────────────── */
